@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addPost } from '../actions/PostActions';
+import { addPost } from '../../actions/PostActions';
 import moment from 'moment';
 
 

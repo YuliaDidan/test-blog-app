@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addComment } from '../actions/PostActions';
+import { addComment } from '../../actions/PostActions';
 
 export class CommentsFom extends Component {
   state = {    
@@ -27,7 +27,7 @@ export class CommentsFom extends Component {
               <div className="input-field">
                 <i className="material-icons prefix">mode_edit</i>              
                 <textarea id="icon_prefix2" className="materialize-textarea" onChange={this.handleChange}></textarea>
-                <label htmlFor="icon_prefix2">Comment</label>
+                <label htmlFor="icon_prefix2">Your comment</label>
               </div>
               <div className="input-field">
                 <button className="btn pink lighten-1 z-depth-0">Add comment</button>

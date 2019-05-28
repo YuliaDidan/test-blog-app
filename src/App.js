@@ -1,9 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import CreatePost from './components/CreatePost';
-import Post from './components/Post';
+import Navbar from './components/presentational/Navbar';
+import Home from './components/presentational/Home';
+import CreatePost from './components/container/CreatePost';
+import Post from './components/container/Post';
 
 
 function App() {
