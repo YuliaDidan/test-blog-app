@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addPost } from '../actions/PostActions';
+import moment from 'moment';
 
-export class CreateBlog extends Component {
+
+export class CreatePost extends Component {
   state = {
+    date: moment().format('MMMM Do YYYY, h:mm:ss a'),
+    author: '',
     title: '',
-    body: '',
+    body: '',  
+    
   }
 
   handleChange = (e) => {
@@ -17,7 +22,7 @@ export class CreateBlog extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.addPost(this.state);
-    // this.props.history.push('/');
+    this.props.history.push('/');
   }
 
   render() {
@@ -26,11 +31,15 @@ export class CreateBlog extends Component {
         <form onSubmit={this.handleSubmit} className="white">
           <h5 className="grey-text text-darken-3">New Blog</h5>
             <div className="input-field">
+              <label htmlFor="title">Author</label>
+              <input type="text" id="author" onChange={this.handleChange}/>
+            </div>
+            <div className="input-field">
               <label htmlFor="title">Title</label>
               <input type="text" id="title" onChange={this.handleChange}/>
             </div>
             <div className="input-field">
-              <label htmlFor="password">Content</label>
+              <label htmlFor="body">Content</label>
               <textarea id="body" className="materialize-textarea" onChange={this.handleChange}></textarea>              
             </div>
             <div className="input-field">
@@ -42,4 +51,4 @@ export class CreateBlog extends Component {
   }
 }
 
-export default connect(null, { addPost } )(CreateBlog)
+export default connect(null, { addPost } )(CreatePost)

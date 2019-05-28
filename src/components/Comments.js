@@ -1,19 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import CommentsForm from './CommentsForm';
+import CommentsList from './CommentsList';
 
 
-class Comments extends Component {
-  render() {
+const Comments = ({postId}) => { 
+  // console.log('postId', postId) 
     return (
       <div>
-        <div className="CommentsList"></div>
-        <div>
-          {/* <CommentsForm /> */}
-        </div>
-      </div>
-      
-      
+        <CommentsList />        
+        <CommentsForm postId={postId} />        
+      </div>     
     )
   }
-}
+
 
 export default Comments;

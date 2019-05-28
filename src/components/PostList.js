@@ -1,9 +1,11 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchPosts } from '../actions/PostActions'; 
+import { fetchPosts } from '../actions/PostActions';
 
-class PostList extends Component {  componentDidMount() {    
+class PostList extends Component {  
+  
+  componentDidMount() {    
     this.props.fetchPosts();
   }
 
@@ -15,12 +17,12 @@ class PostList extends Component {  componentDidMount() {
               <div className="card z-depth-0" key={post.id}>                             
                 <div className="card-content">                  
                     <Link to={'/' + post.id}>
-                    <span className="card-title">{post.title}</span>
+                    <h4 className="blue-text text-darken-4">{post.title}</h4>
                     </Link>
                     <div className="card-action grey-text">
                       <div >{post.body}</div>
-                      <div className="green-text">Posted by Yulia Didan</div>
-                      <div className="green-text">26 May, 10am</div>
+                      <div className="indigo-text text-lighten-1">Posted by {post.author}</div>
+                      <div className="indigo-text text-lighten-1">{post.date} </div>
                     </div>                                     
                   </div>
               </div>                                   
@@ -37,8 +39,7 @@ class PostList extends Component {  componentDidMount() {
   }  
 }
 
-const mapStateToProps = (state) => {
-   
+const mapStateToProps = (state) => {   
   return {
     posts: state.posts,
   }

@@ -6,7 +6,7 @@ const Home = () => {
     <div className="container">
         <div className="row">
           <div className="col">
-            <h2 className="">All the posts for you</h2>
+            <h3 className="indigo-text text-accent-2">All the posts for you</h3>
             <PostList />
           </div>          
         </div>

@@ -7,7 +7,7 @@ const Navbar = () => {
           <nav className="nav-wrapper blue darken-3">
             <div className="container">
                 <Link to="/" className="brand-logo">
-                  My Blogs
+                  HappyBlog
                 </Link>
               <ul className="right menu">                          
                 <li><NavLink to="/" className="item">Home</NavLink></li>

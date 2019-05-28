@@ -7,8 +7,8 @@ const rootReducer = (state = initState, action) => {
   switch (action.type) {
     case 'FETCH_POSTS':     
      return  {...state, posts: action.payload};
-     case 'ADD_POST':       
-       return state
+     case 'ADD_POST':             
+       return {...state, posts: [...state.posts, action.payload]}
      case 'DELETE_POST':
       let newPosts = state.posts.filter(post => {      
         return action.id !== post.id
