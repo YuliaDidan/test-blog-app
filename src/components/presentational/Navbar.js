@@ -10,7 +10,7 @@ const Navbar = () => {
                   HappyBlog
                 </Link>
               <ul className="right menu">                          
-                <li><NavLink to="/" className="item">Home</NavLink></li>
+                <li><NavLink to="/" activeClassName="active">Home</NavLink></li>
                 <li> <NavLink to='/create'>New Post</NavLink></li>
               </ul>        
           </div>
