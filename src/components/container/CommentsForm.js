@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addComment } from '../../actions/PostActions';
-import { nullableTypeAnnotation } from '@babel/types';
+import { addComment } from '../../actions';
+
 
 export class CommentsFom extends Component {
   state = {
@@ -27,7 +27,7 @@ export class CommentsFom extends Component {
           <form onSubmit={this.handleSubmit} className="white">
               <div className="input-field">
                 <i className="material-icons prefix">mode_edit</i>
-                <textarea id="icon_prefix2" className="materialize-textarea" onChange={this.handleChange}></textarea>
+                <textarea id="icon_prefix2" className="materialize-textarea" value={this.state.body} onChange={this.handleChange}></textarea>
                 <label htmlFor="icon_prefix2">Your comment</label>
               </div>
               <div className="input-field">

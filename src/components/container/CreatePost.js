@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addPost } from '../../actions/PostActions';
+import { addPost } from '../../actions';
 import moment from 'moment';
 
+const getRandomInt = (min, max) => {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 export class CreatePost extends Component {
   state = {
     date: moment().format('MMMM Do YYYY, h:mm:ss a'),
-    author: '',
     title: '',
-    body: '',  
-    
+    body: '',
+    userId: getRandomInt(1, 10),
   }
+
 
   handleChange = (e) => {
     this.setState({
@@ -40,12 +43,12 @@ export class CreatePost extends Component {
             </div>
             <div className="input-field">
               <label htmlFor="body">Content</label>
-              <textarea id="body" className="materialize-textarea" onChange={this.handleChange}></textarea>              
+              <textarea id="body" className="materialize-textarea" onChange={this.handleChange}></textarea>
             </div>
             <div className="input-field">
               <button className="btn pink lighten-1 z-depth-0">Create</button>
             </div>
-        </form>        
+        </form>
       </div>
     )
   }

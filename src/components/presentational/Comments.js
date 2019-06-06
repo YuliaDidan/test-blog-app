@@ -3,15 +3,16 @@ import CommentsForm from '../container/CommentsForm';
 import CommentsList from '../container/CommentsList';
 
 
-const Comments = ({postId}) => {  
+const Comments = ({postId}) => {
     return (
       <div>
         <CommentsForm postId={postId} />
         <span className="blue-text text-darken-4">Comments</span>
-        <ul className="collection">          
+        <ul className="collection">
           <CommentsList postId={postId} />
-        </ul>                 
-      </div>     
+          {/* <li>These are comments</li> */}
+        </ul>
+      </div>
     )
   }
 

@@ -11,13 +11,13 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Navbar />
-          <Switch>        
+          <Switch>
             <Route exact path='/' component={Home} />
             <Route path='/create' component={CreatePost} />
-            <Route path='/:post_id' component={Post} /> 
-          </Switch>                       
+            <Route path='/:post_id' component={Post} />
+          </Switch>
       </div>
-    </BrowserRouter>    
+    </BrowserRouter>
   );
 }
 
