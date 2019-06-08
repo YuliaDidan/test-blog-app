@@ -30,7 +30,6 @@ class CommentsList extends Component {
 }
 
 const mapStateToProps = (state) => {
-  console.log('state with comments', state.comments)
   return {
     comments: state.comments.comments,
   }

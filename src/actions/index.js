@@ -20,7 +20,6 @@ const _fetchUser = _.memoize(async (id, dispatch) => {
 
 export const fetchComments = (id) => async dispatch => {
   const response = await jsonPlaceholder.get(`/comments?postId=${id}`);
-  console.log('comments-response', response.data);
   dispatch({ type: FETCH_COMMENTS, payload: response.data});
 };
 

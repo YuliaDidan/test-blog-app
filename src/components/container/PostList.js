@@ -23,6 +23,7 @@ class PostList extends Component {
                     </Link>
                     <div className="card-action grey-text" style={{padding: "16px 0"}}>
                       <div >{post.body}</div>
+                      {/* <div className="indigo-text text-lighten-1">Posted by {post.author}</div> */}
                       <UserHeader userId={post.userId} />
                       <div className="indigo-text text-lighten-1">{post.date} </div>
                     </div>
